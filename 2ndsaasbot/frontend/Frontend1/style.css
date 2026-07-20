@@ -1,0 +1,153 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: #1e293b;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Container */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Chat Area */
+#chatFeed {
+    height: 500px;
+    overflow-y: auto;
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+
+/* Chat Messages */
+.msg {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* User Message */
+.user {
+    background-color: #2563eb;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Bot Message */
+.bot {
+    background-color: #334155;
+    margin-right: auto;
+}
+
+/* Input Section */
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Text Input */
+#userInput {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* All Buttons */
+button {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Send Button */
+#sendBtn {
+    background-color: #22c55e;
+    color: white;
+}
+
+#sendBtn:hover {
+    background-color: #16a34a;
+}
+
+/* Voice Button */
+#voiceBtn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+#voiceBtn:hover {
+    background-color: #2563eb;
+}
+
+/* PDF Button */
+#pdfBtn {
+    background-color: #f59e0b;
+    color: white;
+}
+
+#pdfBtn:hover {
+    background-color: #d97706;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: #94a3b8;
+}
+
+/* Scrollbar */
+#chatFeed::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chatFeed::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+#chatFeed::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .input-area {
+        flex-wrap: wrap;
+    }
+
+    #userInput {
+        width: 100%;
+    }
+
+    #chatFeed {
+        height: 400px;
+    }
+}

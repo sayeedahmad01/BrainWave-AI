@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My SAAS Application</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My SAAS App!</h1>
+    </header>
+
+    <main>
+        <p>This is your frontend. It can interact with your Python backend.</p>
+        <button id="fetchDataBtn">Fetch Data from Backend</button>
+        <div id="dataDisplay"></div>
+
+        <hr>
+
+        <h2>Gemini Service Interaction</h2>
+        <input type="text" id="geminiInput" placeholder="Enter your prompt...">
+        <button id="sendToGeminiBtn">Send to Gemini</button>
+        <div id="geminiResponse"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My SAAS App</p>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+from flask import Flask, render_template, jsonify, request
+# Assuming gemini_service.py contains functions you can import
+# from gemini_service import get_gemini_response_function # Adjust this based on your actual gemini_service.py content
+
+# Initialize Flask app, specifying template and static folders
+app = Flask(__name__,
+            template_folder='templates',  # Where your HTML files are
+            static_folder='static')       # Where your CSS/JS/images are
+
+# --- Frontend Serving Route ---
+@app.route('/')
+def index():
+    """Serves the main HTML page."""
+    return render_template('index.html')
+
+# --- Backend API Endpoints (to be called by your JavaScript) ---
+
+@app.route('/api/data')
+def get_some_data():
+    """An example API endpoint to serve data to the frontend."""
+    return jsonify({"message": "Hello from Flask backend!", "timestamp": "7/17/2024"})
+
+@app.route('/api/gemini', methods=['POST'])
+def call_gemini_service():
+    """An API endpoint to proxy requests to your gemini_service.py."""
+    data = request.get_json()
+    prompt = data.get('prompt')
+
+    if not prompt:
+        return jsonify({"error": "Prompt is required"}), 400
+
+    try:
+        # Placeholder: You need to integrate your actual gemini_service.py here
+        # Example:
+        # gemini_response = get_gemini_response_function(prompt)
+        gemini_response = f"Simulated Gemini response for: '{prompt}' (Integrate gemini_service.py here!)"
+
+        return jsonify({"response": gemini_response})
+    except Exception as e:
+        print(f"Error calling Gemini service: {e}")
+        return jsonify({"error": "Failed to get response from Gemini service"}), 500
+
+# --- Run the app ---
+if __name__ == '__main__':
+    app.run(debug=True, port=5000) # You can change the port if needed

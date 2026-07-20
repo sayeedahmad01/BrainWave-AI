@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Chatbot SaaS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">🤖</div>
+            <h2>GenAI Bot</h2>
+        </div>
+
+        <button class="new-chat" id="newChatBtn">
+            + New Chat
+        </button>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back! Let's build something today.</p>
+            </div>
+
+            <button id="themeBtn">🌓</button>
+
+        </header>
+
+        <!-- Chat Area -->
+        <div class="chat-container">
+
+            <!-- Welcome Message -->
+            <div class="welcome-message" id="welcomeMessage">
+                <h2>How can I help you today?</h2>
+                <p>Ask me anything from coding to creative writing.</p>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-feed" id="chatFeed"></div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+
+                <!-- Voice Button -->
+                <button id="voiceBtn" title="Voice Input">
+                    🎤
+                </button>
+
+                <!-- Hidden PDF Input -->
+                <input
+                    type="file"
+                    id="pdfUpload"
+                    accept=".pdf"
+                    hidden
+                >
+
+                <!-- PDF Button -->
+                <button id="pdfBtn" title="Upload PDF">
+                    📄
+                </button>
+
+                <!-- User Input -->
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Type your message here..."
+                >
+
+                <!-- Send Button -->
+                <button id="sendBtn">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            © 2026 GenAI Chatbot SaaS by PRAKASH SENAPATI.
+        </footer>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html> 
